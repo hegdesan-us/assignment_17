@@ -21,16 +21,9 @@ https://github.com/hegdesan-us/assignment_17.git
  Contains file : bank-additional-full.csv
 
 ### Data Preperation
- **Heatmap of Missing values**
+ **Not much missing values**
 
- 
  ![MissingDataImage](images/missing_values_before.png)
-
-- Droping unique value columns as it can't be used for model. id, vin
-- Droping region as state can be used instead
-- Dropping size as 71% information is missing
-- Dropping paint_color as 30% information is missing
-- Dropping Drive as 30% information is missing
 
 
 ## Exploratory Data Analysis (EDA)
@@ -89,43 +82,23 @@ Correlation Heatmap
 ## Machine Learning Models 
 
 
-We have to be using various machine learning models to see which model reduces the __mean absolute error (MAE)__ or __mean squared error (MSE)__ on the cross-validation data respectively. Below are the various machine learning models used. 
+Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
 
 
-| __Machine Learning Models__| __Mean Absolute Error__| __R2 Error__|__Time to Run(sec)__|
+| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
 | :-:| :-:| :-:|:-:|
-|  Linear Regression| 83939779.13678667| 0.5278563705085384|6|
-|  Linear Polynomial|	60419849.371127896|	0.6601510360311418|59|
-|	 Ridge Regressor|	64006238.171969175|	0.6399783522022104|225|
-|	 Lasso Regression|	70079104.16002005|	0.6058197563791127|260|
-|	 Linear Seq Regressor|	75396086.80552292|	0.5759128456151473|64|
-
-
- ![Different Regression Model MSE Comparision](images/mse_comparision.png)
- ![Different Regression Model R2 Comparision](images/r2_comparision.png)
+|  Baseline   |  0.003  |0.58    |0.58    |
+|  Lin Reg    |  0.02   |0.35    |0.35   |
+|  Log Reg    |  0.44   |0.75    |0.75   |
+|  KNN   |  0.012  |0.89    |0.84    |
+|  SVM   |  80  |0.76    |0.76    |
+|  RF   |  9.14  |0.99    |0.87    |
+|  DTree   |  0.21  |0.99    |0.82    |
 
 ## Major Feature considered for hyperparameter tuing
 Looking at the random forest model, here are some major features impacting the model
 ![Feature Impact on Model - Numerical Data](images/feature.png)
 
-
-
-{'transformer__polynomialfeatures__degree': 5}
-
-Here are some major features based on the importance
-- year    0.324 +/- 0.002
-- model   0.253 +/- 0.001
-- odometer0.069 +/- 0.001
-- fuel    0.033 +/- 0.001
-- transmission0.023 +/- 0.000
-- cylinders0.017 +/- 0.000
-- type    0.012 +/- 0.000
-- state   0.006 +/- 0.000
-- title_status0.006 +/- 0.000
-- manufacturer0.005 +/- 0.000
-- condition0.001 +/- 0.000
-
- ![Linear Regression - Poly](images/LinearReg-Poly.png)
 
 **Next steps**
 
