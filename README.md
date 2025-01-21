@@ -21,16 +21,9 @@ https://github.com/hegdesan-us/assignment_17.git
  Contains file : bank-additional-full.csv
 
 ### Data Preperation
- **Heatmap of Missing values**
+ **Not much missing values**
 
- 
  ![MissingDataImage](images/missing_values_before.png)
-
-- Droping unique value columns as it can't be used for model. id, vin
-- Droping region as state can be used instead
-- Dropping size as 71% information is missing
-- Dropping paint_color as 30% information is missing
-- Dropping Drive as 30% information is missing
 
 
 ## Exploratory Data Analysis (EDA)
@@ -102,32 +95,10 @@ Now, we aim to compare the performance of the Logistic Regression model to our K
 |  RF   |  9.14  |0.99    |0.87    |
 |  DTree   |  0.21  |0.99    |0.82    |
 
-
- ![Different Regression Model MSE Comparision](images/mse_comparision.png)
- ![Different Regression Model R2 Comparision](images/r2_comparision.png)
-
 ## Major Feature considered for hyperparameter tuing
 Looking at the random forest model, here are some major features impacting the model
 ![Feature Impact on Model - Numerical Data](images/feature.png)
 
-
-
-{'transformer__polynomialfeatures__degree': 5}
-
-Here are some major features based on the importance
-- year    0.324 +/- 0.002
-- model   0.253 +/- 0.001
-- odometer0.069 +/- 0.001
-- fuel    0.033 +/- 0.001
-- transmission0.023 +/- 0.000
-- cylinders0.017 +/- 0.000
-- type    0.012 +/- 0.000
-- state   0.006 +/- 0.000
-- title_status0.006 +/- 0.000
-- manufacturer0.005 +/- 0.000
-- condition0.001 +/- 0.000
-
- ![Linear Regression - Poly](images/LinearReg-Poly.png)
 
 **Next steps**
 
