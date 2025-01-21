@@ -89,16 +89,18 @@ Correlation Heatmap
 ## Machine Learning Models 
 
 
-We have to be using various machine learning models to see which model reduces the __mean absolute error (MAE)__ or __mean squared error (MSE)__ on the cross-validation data respectively. Below are the various machine learning models used. 
+Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
 
 
-| __Machine Learning Models__| __Mean Absolute Error__| __R2 Error__|__Time to Run(sec)__|
+| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
 | :-:| :-:| :-:|:-:|
-|  Linear Regression| 83939779.13678667| 0.5278563705085384|6|
-|  Linear Polynomial|	60419849.371127896|	0.6601510360311418|59|
-|	 Ridge Regressor|	64006238.171969175|	0.6399783522022104|225|
-|	 Lasso Regression|	70079104.16002005|	0.6058197563791127|260|
-|	 Linear Seq Regressor|	75396086.80552292|	0.5759128456151473|64|
+|  Baseline   |  0.003  |0.58    |0.58    |
+|  Lin Reg    |  0.02   |0.35    |0.35   |
+|  Log Reg    |  0.44   |0.75    |0.75   |
+|  KNN   |  0.012  |0.89    |0.84    |
+|  SVM   |  80  |0.76    |0.76    |
+|  RF   |  9.14  |0.99    |0.87    |
+|  DTree   |  0.21  |0.99    |0.82    |
 
 
  ![Different Regression Model MSE Comparision](images/mse_comparision.png)
