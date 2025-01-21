@@ -7,7 +7,7 @@ https://github.com/hegdesan-us/assignment_11.git
 ```
  **URL for solution Jupyter notebook:** 
 ```
-https://github.com/hegdesan-us/assignment_11/blob/23df8f0c9dee654dac664d3cc36a9ce7491a0be1/prompt_II.ipynb
+prompt_III.ipynb
 ```
 
 **Name :** Sanjay Hegde \
