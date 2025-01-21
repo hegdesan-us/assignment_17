@@ -103,7 +103,7 @@ Looking at the random forest model, here are some major features impacting the m
 
 **Next steps**
 
-- Iterate through models based on selective features for better price model
+- Iterate through models based on selective features for better  model
 
 
  
