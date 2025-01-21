@@ -53,27 +53,28 @@ Y - only 11 % customers have Subscribed the banks Term plan.
 
 <h2> Visualizations</h2>
 
-Distribution of Price
+**Univariate Data Analysis**
 
  ![Numarical Data analysis](images/numvar-analysis.png)
 
  ![Categorical Data analysis](images/catvar-analysis.png)
 
 
-Distribution of Price
+**Bivariate Data Analysis**
 
  ![Bivariate Data analysis - Numerical Data](images/bivariate-Num.png)
 
  ![Bivariate Data analysis - Catagorical Data](images/bivariate-Cat.png)
  
-Outlier Analusis
+**Outlier Analysis**
 
  ![Outliers before clean-up](images/outliers-before.png)
+
 
  ![Outliers after clean-up](images/outliers-after.png)
 
 
-Correlation Heatmap
+**Correlation Heatmap**
 
 ![Correlationheatmap](images/correlation_heat.png)
  
