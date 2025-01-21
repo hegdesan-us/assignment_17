@@ -3,24 +3,22 @@
 
  **URL for the assignment:** 
 ```
-https://github.com/hegdesan-us/assignment_11.git
+https://github.com/hegdesan-us/assignment_17.git
 ```
  **URL for solution Jupyter notebook:** 
 ```
-prompt_III.ipynb
+[prompt_III.ipynb](https://github.com/hegdesan-us/assignment_17/blob/c0b910b7f9078b128a4f284e30b062b9fa5ab0d4/prompt_III.ipynb)
 ```
 
 **Name :** Sanjay Hegde \
 **Couse :** UCB AI/ML 
-
-**prompt_II.ipynb :** Original Prompt file (Questions only)
 
 **Directory :** Images \
   Description : Contains the images needed for the prompt questions and the Jupyter notebook 
 
 **Directory : data** \
  Description : Contains the data file needed for the class project\
- Contains file : vehicles.csv
+ Contains file : bank-additional-full.csv
 
 ### Data Preperation
  **Heatmap of Missing values**
@@ -38,23 +36,49 @@ prompt_III.ipynb
 ## Exploratory Data Analysis (EDA)
 In this section of the project, the data is explored to see the patterns and trends and observe interesting insights. Below are some interesting observations generated.
 
-- The 'F-150' model is the top-selling car. Many cars in other category needs to be properly tagged.
-- 'Gas' is the predominant fuel type for cars in the dataset, surpassing 'Diesel' and 'CNG,' indicating fuel preference among buyers.
-- The majority of cars are sold through dealers, underscoring the role of dealerships in the automotive market.
-- 'Manual' transmission cars significantly outnumber 'Automatic' transmission cars, showcasing consumer transmission preferences.
-- 'Diesel' cars tend to have higher 'Selling_Price' compared to 'Petrol' or 'CNG' vehicles, emphasizing the influence of fuel type on car pricing.
-- 'Dealer' sellers usually ask for higher prices than 'Individual' sellers, revealing the impact of seller type on prices.
-- 'Automatic' transmission cars typically have higher prices than their 'Manual' counterparts, reflecting consumer preferences.
+- Age - The age between 30 - 40 has more Bank customer as compared to age > 60 years.
+- Duration - More customers are contacted brtween 50 - 250 second and as the time duration increased the customers count get decreased.
+- campaign - Approximately 80 % of customers are contacted between 1 - 3 times campaign.
+- pdays - Approximately 96 % customers has not contacted from previous campaign .
+- Previous - Previous graph shows that maximum customers has not contacted before this Campaign.
+- emp.var.rate , cons.price.idx , cons.conf.idx , euribor3m , nr.employed are not normaly distributed.
+
+
+- Job - Approximately 70 % of customers are working in "Service" , "admin" , "blue-collar" & "technician" field.
+- Marital - 60 % customers are married , 28 % are single , 11 % are divorced and 1 % are unknown.
+- Education - 29.5 % customers have univercity degree , 23 % are high shool , 10 % have professional course and remaining have 9y,6y,4y,unknown. but 15 - 16 customers are illiterate.
+- default - 80 % customers has not defaulted but 20 % customers has defaulted(maked mistakes).
+- Housing - 52 % customers has House loan , 45 % has not taken any house Loan and about 3 % customer is unknown.
+- Loan - 82 % customers have not any personal loan , 15 % have personal loan & Remaining 3 % details is unknown.
+- contact - 63.5 % customers have cellular type and remaining 36.5 % have telephone type contact.
+- Month - more than 50 % customers are contacted only in "may" & "july" month.
+- day_of_week - All customers are choose All weekdays in equal ratio.
+- Poutcome - Only 3 % of campaign got success and 86 % is nonexistant.
+
+Y - only 11 % customers have Subscribed the banks Term plan.
+
 
 <h2> Visualizations</h2>
 
 Distribution of Price
 
- ![Price Distribution](images/price-distribution.png)
+ ![Numarical Data analysis](images/numvar-analysis.png)
 
-Heat Map after cleaning
+ ![Categorical Data analysis](images/catvar-analysis.png)
 
-![Heatmap](images/missing_values_after.png)
+
+Distribution of Price
+
+ ![Bivariate Data analysis - Numerical Data](images/bivariate-Num.png)
+
+ ![Bivariate Data analysis - Catagorical Data](images/bivariate-Cat.png)
+ 
+Outlier Analusis
+
+ ![Outliers before clean-up](images/outliers-before.png)
+
+ ![Outliers after clean-up](images/outliers-after.png)
+
 
 Correlation Heatmap
 
@@ -80,9 +104,12 @@ We have to be using various machine learning models to see which model reduces t
  ![Different Regression Model MSE Comparision](images/mse_comparision.png)
  ![Different Regression Model R2 Comparision](images/r2_comparision.png)
 
-## Summary of Regression Model selection and feature importance
-Looking at the MAE and R2, Linear Polynomial seems to provide optimal price predication in this scenario
-Looking at the coefficients, polynomial Feature 5 seems to provide optimal results.
+## Major Feature considered for hyperparameter tuing
+Looking at the random forest model, here are some major features impacting the model
+![Feature Impact on Model - Numerical Data](images/feature.png)
+
+
+
 {'transformer__polynomialfeatures__degree': 5}
 
 Here are some major features based on the importance
@@ -99,28 +126,6 @@ Here are some major features based on the importance
 - condition0.001 +/- 0.000
 
  ![Linear Regression - Poly](images/LinearReg-Poly.png)
-
-
-## Deployment
-The general price of a car depends on newer model year, lower odometer readings, fuel type and transmission. Some of the reccomentation include
-- The 'F-150' model is the top-selling car. Many cars in other category needs to be properly tagged.
-- 'Gas' is the predominant fuel type for cars in the dataset, surpassing 'Diesel' and 'CNG,' indicating fuel preference among buyers.
-- The majority of cars are sold through dealers, underscoring the role of dealerships in the automotive market.
-- 'Manual' transmission cars significantly outnumber 'Automatic' transmission cars, showcasing consumer transmission preferences.
-- 'Diesel' cars tend to have higher 'Selling_Price' compared to 'Petrol' or 'CNG' vehicles, emphasizing the influence of fuel type on car pricing.
-- 'Dealer' sellers usually ask for higher prices than 'Individual' sellers, revealing the impact of seller type on prices.
-- 'Automatic' transmission cars typically have higher prices than their 'Manual' counterparts, reflecting consumer preferences.
-
- ![SubplotFuelTrans](images/plt-1.png)
- 
- ![SubplotFuelTrans](images/plt-2.png)
- 
- ![SubplotFuelTrans](images/plt-3.png)
- 
- ![SubplotFuelTrans](images/plt-4.png)
- 
- ![SubplotFuelTrans](images/plt-5.png)
- 
 
 **Next steps**
 
