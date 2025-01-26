@@ -86,15 +86,14 @@ Y - only 11 % customers have Subscribed the banks Term plan.
 Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
 
 
-| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|
-| :-:| :-:| :-:|:-:|
-|  Baseline   |  0.003  |0.58    |0.58    |
-|  Lin Reg    |  0.02   |0.35    |0.35   |
-|  Log Reg    |  0.44   |0.75    |0.75   |
-|  KNN   |  0.012  |0.89    |0.84    |
-|  SVM   |  80  |0.76    |0.76    |
-|  RF   |  9.14  |0.99    |0.87    |
-|  DTree   |  0.21  |0.99    |0.82    |
+| __Machine Learning Models__| __Train Time (sec)__| __Train Accuracy__|__Test Accuracy__|__Precision__|__Recall__|__F1 Score__|
+| :-:| :-:| :-:|:-:|:-:|:-:|:-:|
+|  Baseline   |  0.00075  |0.5    |0.5    | 0 | 0 |0 |
+|  Log Reg    |  0.062   |0.85    |0.83   | 0.83 | 0.84 |0.84 |
+|  KNN   |  0.003  |0.89    |0.85    | 0.83 | 0.88 |0.86 |
+|  SVM   |  0.45  |0.84    |0.83    | 0.85 | 0.82 |0.84 |
+|  RF   |  0.42  |1.0    |0.88    | 0.85 | 0.93 |0.89 |
+|  DTree   |  0.16  |1.0    |0.83    | 0.83 | 0.84 |0.83 |
 
 ## Major Feature considered for hyperparameter tuing
 Looking at the random forest model, here are some major features impacting the model
