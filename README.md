@@ -80,9 +80,11 @@ Y - only 11 % customers have Subscribed the banks Term plan.
  
 
  
-## Machine Learning Models 
+## Major features for the Machine Learning Models SelectKBest feature selection
+- Selected Features: ['age', 'duration', 'campaign', 'pdays', 'previous', 'emp.var.rate', 'cons.price.idx', 'euribor3m', 'nr.employed', 'job_student']
 
 
+## Model performance comparision
 Now, we aim to compare the performance of the Logistic Regression model to our KNN algorithm, Decision Tree, and SVM models.  Using the default settings for each of the models, fit and score each.  Also, be sure to compare the fit time of each of the models.  Present your findings in a `DataFrame` similar to that below: 
 
 
@@ -94,10 +96,6 @@ Now, we aim to compare the performance of the Logistic Regression model to our K
 |  SVM   |  0.45  |0.84    |0.83    | 0.85 | 0.82 |0.84 |
 |  RF   |  0.42  |1.0    |0.88    | 0.85 | 0.93 |0.89 |
 |  DTree   |  0.16  |1.0    |0.83    | 0.83 | 0.84 |0.83 |
-
-## Major Feature considered for hyperparameter tuing
-Looking at the random forest model, here are some major features impacting the model
-![Feature Impact on Model - Numerical Data](images/feature.png)
 
 
 **Next steps**
